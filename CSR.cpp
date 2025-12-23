@@ -1,6 +1,5 @@
 #include "CSR.h"
 #include "COO.h"
-
 #include <stdint.h>
 #include <string>
 #include <fstream>

@@ -1,6 +1,4 @@
 #include "COO.h"
-#include "Vector.h"
-
 #include <string>
 #include <sstream>
 #include <fstream>

@@ -1,5 +1,4 @@
 #include "DataLoader.h"
-
 #include <iostream>
 #include "COO.h"
 #include "cusparse/include/cuSparseMultiply.h"
@@ -60,8 +59,7 @@ DataLoader<ValueType>::DataLoader(std::string path) : matrices()
 	
 	convert(matrices.gpuA, matrices.cpuA, 0);
 	cuSPARSE::CuSparseTest<ValueType> cuSparse;
-	
-	//calculate the transpose if matrix is not square
+
 	if (matrices.gpuA.rows != matrices.gpuA.cols)
 	{
 		cuSparse.Transpose(matrices.gpuA, matrices.gpuB);
